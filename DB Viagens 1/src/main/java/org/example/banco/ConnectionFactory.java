@@ -8,7 +8,7 @@ public class ConnectionFactory {
     private static Connection conexao = null;
 
     // Configurações do banco de dados
-    private static final String URL = "jdbc:postgresql://192.168.10.82:5432/viagens";
+    private static final String URL = "jdbc:postgresql://localhost:5432/viagens";
     private static final String USUARIO = "postgres";
     private static final String SENHA = "postgres";
 

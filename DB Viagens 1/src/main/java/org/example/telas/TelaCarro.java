@@ -4,6 +4,7 @@ import org.example.banco.CarroSQL;
 import org.example.entidades.Carro;
 
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Scanner;
 
 public class TelaCarro {
@@ -31,5 +32,40 @@ public class TelaCarro {
                 System.out.println("Não existe carro com ID="+idCarro);
             }
         } while(idCarro !=0);
+    }
+
+    public static void teste(){
+        try {
+            Carro car = new Carro();
+            car.setModelo("Fumbeca velha");
+            car.setPlaca("XXX9998");
+            CarroSQL carroSql = new CarroSQL();
+            carroSql.gravar(car);
+            car.setPlaca("AAA01B01");
+            carroSql.gravar(car);
+            System.out.println(car);
+            carroSql.deletaPorId(car.getId());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void testeLista(){
+        try {
+            CarroSQL carroSQL = new CarroSQL();
+            List<Carro> lista = carroSQL.listaTodos();
+            for(Carro carro: lista){
+                System.out.println(carro);
+            }
+
+            System.out.println("");
+            lista = carroSQL.listaFiltrados("where mod(id, 3)=0 order by modelo");
+            for(Carro carro: lista){
+                System.out.println(carro);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
