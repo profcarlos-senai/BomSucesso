@@ -63,7 +63,7 @@ public abstract class TabelaSQL<E extends Entidade> {
             // remove o ";" caso exista
             String insert = getInsertSQL(dados).replace(";"," ");
             // RETURNING ID faz com que eu descubra o ID do novo registro
-            PreparedStatement pre = con.prepareStatement(insert + "returning id;");
+            PreparedStatement pre = con.prepareStatement(insert + " returning id;");
             ResultSet res = pre.executeQuery();
             // recupera o ID e coloca no objeto
             res.next();

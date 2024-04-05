@@ -19,16 +19,12 @@ public class CarroSQL extends TabelaSQL<Carro>{
 
     @Override
     protected String getUpdateSQL(Carro dados) {
-        if (dados == null) return ""; // vai dar erro lá dentro
-        // monta o update e devolve para o ancestral usar
         return String.format("update carros set modelo='%s', placa='%s' where id=%d;",
                 dados.getModelo(), dados.getPlaca(), dados.getId());
     }
 
     @Override
     protected String getInsertSQL(Carro dados) {
-        if (dados == null) return ""; // vai dar erro lá dentro
-        // monta o insert e devolve para o ancestral usar
         return String.format("insert into carros(modelo, placa) values('%s','%s')",
                 dados.getModelo(), dados.getPlaca());
     }
