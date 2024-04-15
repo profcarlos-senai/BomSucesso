@@ -22,7 +22,7 @@ public class ConnectionFactory {
             // lembra a conexão pra não precisar conectar na próxima vez que chamar
             conexao = DriverManager.getConnection(URL, USUARIO, SENHA);
             return conexao;
-        } catch (SQLException e) {
+        } catch (Exception e) {
             // Trata exceções
             e.printStackTrace();
             throw new RuntimeException("Erro ao conectar ao banco de dados", e);

@@ -15,7 +15,7 @@ public class Main {
         }
 
         // se chegou aqui tem conexão
-        TelaCarro.ProcuraCarro();
+        TelaCarro.listaCarros();
 
         // apaga a luz antes de sair
         ConnectionFactory.closeConnection();

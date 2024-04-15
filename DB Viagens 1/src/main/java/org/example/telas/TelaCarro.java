@@ -4,9 +4,41 @@ import org.example.banco.CarroSQL;
 import org.example.entidades.Carro;
 
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Scanner;
 
 public class TelaCarro {
+
+    public static void listaCarros(){
+        try {
+            // puxar a lista de carros do CarrosSQL
+            List<Carro> lista = CarroSQL.listaTodos();
+            // imprime um cabeçalho
+            System.out.println("LISTA DE CARROS:");
+            System.out.println("---------------------------------------------------------------");
+            System.out.println("id    placa      modelo");
+            // vasculha a lista
+            for (Carro car : lista) {
+                // imprime um carro
+                System.out.printf("%-5d %-10s %-30s\n", car.getId(), car.getPlaca(), car.getModelo());
+            }
+        } catch (Exception e){
+            System.out.println("Erro ao listar carros: "+e.getMessage());
+        }
+
+    }
+
+    // testa a gravação de carros
+    public static void testaSalvar(){
+        try {
+            Carro carro = CarroSQL.buscaPorId(10);
+            carro.setModelo("Jamanta cor-de-rosa");
+            carro.setPlaca("BBB9999");
+            CarroSQL.salvar(carro);
+        } catch (Exception e) {
+            e.printStackTrace(); // mostra o erro
+        }
+    }
 
     // pede um id de carro e imprime os dados, repete até teclar 0
     public static void ProcuraCarro(){
