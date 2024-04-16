@@ -2,6 +2,8 @@ package org.example;
 
 import org.example.banco.ConnectionFactory;
 import org.example.telas.TelaCarro;
+import org.example.telas.TelaCidade;
+import org.example.telas.TelaMotorista;
 
 
 public class Main {
@@ -15,7 +17,7 @@ public class Main {
         }
 
         // se chegou aqui tem conexão
-        TelaCarro.listaCarros();
+        TelaMotorista.listaMotoristas();
 
         // apaga a luz antes de sair
         ConnectionFactory.closeConnection();
