@@ -1,0 +1,10 @@
+João_Silva	M	1.75	70	1990
+Maria_Santos	F	1.65	60	1988
+Pedro_Oliveira	M	1.80	75	1992
+Ana_Souza	F	1.70	65	1985
+Lucas_Costa	M	1.78	72	1987
+Juliana_Ferreira	F	1.68	58	1991
+Carlos_Rodrigues	M	1.85	80	1983
+Amanda_Gomes	F	1.62	55	1989
+Rafael_Martins	M	1.79	73	1982
+Patrícia_Almeida	F	1.70	63	1986
