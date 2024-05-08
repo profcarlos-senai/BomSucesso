@@ -3,9 +3,25 @@ package org.example.telas;
 import org.example.banco.MotoristaSQL;
 import org.example.entidades.Motorista;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class TelaMotorista {
+
+    public static void procura(){
+        try {
+            Scanner scan = new Scanner(System.in);
+            System.out.println("O que procurar?");
+            String nome = scan.next();
+            ArrayList<Motorista> motoristas = (ArrayList<Motorista>) MotoristaSQL.procuraNome(nome);
+            for (Motorista motora : motoristas) {
+                System.out.println(motora.getNome());
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
     public static void listaMotoristas(){
         try {

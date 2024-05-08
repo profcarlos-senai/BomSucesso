@@ -17,7 +17,7 @@ public class Main {
         }
 
         // se chegou aqui tem conexão
-        TelaMotorista.listaMotoristas();
+        TelaMotorista.procura();
 
         // apaga a luz antes de sair
         ConnectionFactory.closeConnection();
