@@ -1,0 +1,179 @@
+Index: .idea/inspectionProfiles/Project_Default.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+new file mode 100644
+--- /dev/null	(date 1715125995240)
++++ b/.idea/inspectionProfiles/Project_Default.xml	(date 1715125995240)
+@@ -0,0 +1,10 @@
++<component name="InspectionProjectProfileManager">
++  <profile version="1.0">
++    <option name="myName" value="Project Default" />
++    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
++      <option name="processCode" value="true" />
++      <option name="processLiterals" value="true" />
++      <option name="processComments" value="true" />
++    </inspection_tool>
++  </profile>
++</component>
+\ No newline at end of file
+Index: src/ContaBancaria.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ContaBancaria.java b/src/ContaBancaria.java
+new file mode 100644
+--- /dev/null	(date 1715126927608)
++++ b/src/ContaBancaria.java	(date 1715126927608)
+@@ -0,0 +1,19 @@
++public class ContaBancaria {
++    private double saldo;
++
++    public double getSaldo() {
++        return saldo;
++    }
++
++    public void sacar(double valor) throws SaldoInsuficienteException {
++        if(valor > saldo){
++            String msg = String.format("Saldo insuficiente: Tentativa de saque de R$ %.2f com saldo de R$ %.2f", valor, saldo);
++            throw new SaldoInsuficienteException(msg);
++        }
++        this.saldo -= valor;
++    }
++
++    public void depositar(double valor){
++        saldo += valor;
++    }
++}
+Index: ../heranca1/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"b89c06e6-b9c9-4ff0-a94c-9a8653776886\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/.gitignore\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/jpa-buddy.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/modules.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/uiDesigner.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/heranca1.iml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Bicho.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Cachorro.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Gato.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Papagaio.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Pet.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../matriz2/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../matriz2/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\"><![CDATA[{\r\n  \"associatedIndex\": 8\r\n}]]></component>\r\n  <component name=\"ProjectId\" id=\"2g6yMvtiT19QkRM9SgNwB82WsBM\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"Application.Main.executor\": \"Run\",\r\n    \"Application.Unnamed.executor\": \"Run\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"settings.editor.selected.configurable\": \"Errors\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Unnamed\" type=\"Application\" factoryName=\"Application\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"heranca1\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"b89c06e6-b9c9-4ff0-a94c-9a8653776886\" name=\"Changes\" comment=\"\" />\r\n      <created>1715032278263</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1715032278263</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../heranca1/.idea/workspace.xml b/../heranca1/.idea/workspace.xml
+--- a/../heranca1/.idea/workspace.xml	(revision f7b673b64a166f05d3459c97676db8f1e8f0de32)
++++ b/../heranca1/.idea/workspace.xml	(date 1715107842132)
+@@ -4,41 +4,21 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b89c06e6-b9c9-4ff0-a94c-9a8653776886" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/heranca1.iml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Bicho.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Cachorro.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Gato.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Papagaio.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Pet.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/../matriz2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../matriz2/.idea/workspace.xml" afterDir="false" />
++    <list default="true" id="f357537a-9c47-4b95-9a79-39ffc3bddf7c" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+-  </component>
+-  <component name="FileTemplateManagerImpl">
+-    <option name="RECENT_TEMPLATES">
+-      <list>
+-        <option value="Class" />
+-      </list>
+-    </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+   </component>
+   <component name="ProjectColorInfo"><![CDATA[{
+-  "associatedIndex": 8
++  "associatedIndex": 1
+ }]]></component>
+-  <component name="ProjectId" id="2g6yMvtiT19QkRM9SgNwB82WsBM" />
++  <component name="ProjectId" id="2g9DwLDx46qIEcozmZuNz29hxrV" />
+   <component name="ProjectLevelVcsManager">
+     <ConfirmationsSetting value="2" id="Add" />
+   </component>
+@@ -48,34 +28,20 @@
+   </component>
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
+-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "Application.Main.executor": "Run",
+-    "Application.Unnamed.executor": "Run",
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "git-widget-placeholder": "master",
+-    "kotlin-language-version-configured": "true",
+-    "settings.editor.selected.configurable": "Errors"
++    "git-widget-placeholder": "dbviagens-prof",
++    "kotlin-language-version-configured": "true"
+   }
+ }]]></component>
+-  <component name="RunManager">
+-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Main" />
+-      <module name="heranca1" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="b89c06e6-b9c9-4ff0-a94c-9a8653776886" name="Changes" comment="" />
+-      <created>1715032278263</created>
++      <changelist id="f357537a-9c47-4b95-9a79-39ffc3bddf7c" name="Changes" comment="" />
++      <created>1715101138549</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+-      <updated>1715032278263</updated>
++      <updated>1715101138549</updated>
+     </task>
+     <servers />
+   </component>
+Index: src/SaldoInsuficienteException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/SaldoInsuficienteException.java b/src/SaldoInsuficienteException.java
+new file mode 100644
+--- /dev/null	(date 1715126316588)
++++ b/src/SaldoInsuficienteException.java	(date 1715126316588)
+@@ -0,0 +1,10 @@
++public class SaldoInsuficienteException extends Exception {
++
++    public SaldoInsuficienteException() {
++    }
++
++    public SaldoInsuficienteException(String msg) {
++        super(msg);
++    }
++
++}
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1715126008441)
++++ b/.idea/.gitignore	(date 1715126008441)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
